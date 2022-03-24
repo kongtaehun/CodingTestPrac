@@ -1,6 +1,6 @@
 # 다익스트라 알고리즘으로 풀었다
 import heapq
-'''
+
 
 n, m = map(int, input().split())
 INF = int(1e9)
@@ -33,7 +33,7 @@ distance = [INF for i in range(n+1)]
 dijstra(x)
 result = dist_x+distance[k]
 print(result)
-'''
+
 
 # 플루드 워셜 알고리즘
 n, m = map(int, input().split())

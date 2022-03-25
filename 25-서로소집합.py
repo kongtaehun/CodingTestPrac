@@ -10,6 +10,7 @@ for i in range(len(parant)):
 # x의 부모를 찾는다.
 
 
+#경로 압축을 이용하여 부모노드가 바로 루트노드가 되게끔
 def find_parant(parant, x):
     if parant[x] != x:
         # x의 부모가 자기자신이 아니면 한번더 재귀적으로 호

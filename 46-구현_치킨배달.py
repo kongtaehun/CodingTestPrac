@@ -73,9 +73,19 @@ for i in range(n):
 # 모든 치킨집 중에서 m개의 치킨집을 뽑았을 경우 리스트
 candidates = list(combinations(chick, m))
 
-# 후보 조합에서 치킨거리의 값 게산
-
+# 리스트안의 모든 집-치킨집과의 거리를 계산하여 합한다.
 
 def get_sum(candidate):
     result = 0
-    for hx, hy in home
+    for hx, hy in home:
+        temp=1e9
+        for cx,cy in candidate:
+            temp = min(temp,abs(cx-hx) + abs(cy-hy))
+        result +=temp
+    return result
+
+result = 1e9
+
+#모든 후보리스트에 대해 실행하여 결과값이 최소인 걸 저장
+for candidate in candidates:
+    result = min(result,get_sum(candidate))

@@ -53,3 +53,33 @@ for i in q:
     result.append(i[1])
 result.sort()
 print(result[turn % (len(q)+1)])
+
+
+
+import heapq
+def solution(food_times, k):
+
+    #아이디어 : 가장 시간이 빨리 걸리는 음식부터 소거하며 계산한다.
+    
+    if sum(food_times)<=k:
+        return -1
+    food = []
+    for i in range(len(food_times)):
+        food.append((food_times[i],i))
+    now_food_count = len(food_times)
+    food.sort()
+    prev=0
+    for i in range(len(food_times)):
+        duration = (food[i][0]-prev)*now_food_count
+        if k>= duration:
+            k-=duration
+            now_food_count -=1
+            prev = food[i][0]
+        else:
+            break
+
+    #남은시간 k, 현재음식개수
+    result = sorted(food,key=lambda x:x[1])[:now_food_count]
+    answer = result[k%now_food_count][1]+1
+    return answer
+solution([8,6,4],15)

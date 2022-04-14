@@ -1,5 +1,6 @@
 # 아이디어: 초기 큐에 낮은번호 순서대로 먼저 입력 후 BFS 실행하면
 # 한차례씩 순서대로 가능하다.
+#
 
 from collections import deque
 '''

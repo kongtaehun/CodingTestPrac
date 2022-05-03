@@ -45,5 +45,5 @@ for i in range(1, len(distance)):
         idx.append(i)
 
 idx_min = min(idx)
-cnt = idx.count(max_result)
+cnt = len(idx)
 print(idx_min, max_result, cnt)

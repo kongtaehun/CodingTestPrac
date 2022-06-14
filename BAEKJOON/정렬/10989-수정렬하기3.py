@@ -2,10 +2,9 @@ import sys
 
 n = int(sys.stdin.readline())
 allNum = [0]*10001
-list = []
 for i in range(n):
-    temp = int(sys.stdin.readline())
-    allNum[temp] += 1
+
+    allNum[int(sys.stdin.readline())] += 1
 
 
 for i in range(10001):

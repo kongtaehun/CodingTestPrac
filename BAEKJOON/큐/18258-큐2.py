@@ -1,8 +1,9 @@
 from collections import deque
+import sys
 n = int(input())
 
 q = deque()
-
+input = sys.stdin.readline
 for i in range(n):
     command = list(map(str, input().split()))
     if command[0] == 'push':

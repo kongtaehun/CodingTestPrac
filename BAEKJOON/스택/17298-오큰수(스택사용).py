@@ -16,3 +16,5 @@ while idx < n:
     else:
         stk.append(idx)
         idx += 1
+for i in answer:
+    print(i, end=' ')

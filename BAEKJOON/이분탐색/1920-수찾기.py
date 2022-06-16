@@ -33,4 +33,4 @@ for i in answersNum:
     result.append(binary_search(target, start, end, num))
 
 for i in result:
-    print(result)
+    print(i)

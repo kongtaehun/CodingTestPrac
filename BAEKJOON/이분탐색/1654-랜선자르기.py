@@ -35,5 +35,4 @@ for i in range(k):
 # ============main==============
 start, end = 1, max(reserved)
 val = binarySearch(n, start, end, reserved)
-
-print(val)
+print(val-1)

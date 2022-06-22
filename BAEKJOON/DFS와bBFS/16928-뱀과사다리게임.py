@@ -1,7 +1,5 @@
 from collections import deque
-# 1. 사다리,뱀의 도착지점은 한점에 여러개가 있을 수 있다
-# -> 도착지점의 board[]가 0인지 아닌지 고려해줘야한다.
-
+#방문이 0이거나 + (더 짧은 거리일 경우)
 
 def bfs(start, board, ladderSnake):
     q = deque()

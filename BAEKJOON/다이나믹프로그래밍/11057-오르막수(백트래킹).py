@@ -1,5 +1,7 @@
 # 백트래킹으로 풀어봤으나 재귀제한걸렸음!
 # 답은 나오는 정도
+import sys
+sys.setrecursionlimit(1**6)
 def dfs(x, start):
     global count
     if x == n:

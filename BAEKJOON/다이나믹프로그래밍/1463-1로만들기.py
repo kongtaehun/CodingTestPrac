@@ -1,7 +1,7 @@
 n = int(input())
 dp = [0]*(n+1)
 if n == 1:
-    print(1)
+    print(0)
 elif n == 2 or n == 3:
     print(1)
 else:
@@ -17,4 +17,4 @@ else:
             temp.append(1+dp[i // 2])
         dp[i] = min(temp)
 
-print(dp[-1])
+    print(dp[-1])

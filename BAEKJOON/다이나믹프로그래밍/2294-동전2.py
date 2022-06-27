@@ -17,7 +17,7 @@ def bfs():
         for i in range(n):
             q.add((nums[i]+now, count+1))
             if nums[i]+now == k:
-                return count+1
+                return count
 
 
 print(bfs())

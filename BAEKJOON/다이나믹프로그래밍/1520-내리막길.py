@@ -13,20 +13,21 @@ def printArr(board):
 
 
 def dfs(x, y):
+    #Base case
     if x == n-1 and y == m-1:
         return 1
-
+    #이미 방문한 적 cast
     if dp[x][y] != -1:
         return dp[x][y]
-
-    ways = 0
+    #첫방문일 경우
+    dp[x][y] = 0
     for i in range(4):
         nx = x+dx[i]
         ny = y+dy[i]
         if nx < n and ny < m and nx >= 0 and ny >= 0:
             if board[x][y] > board[nx][ny]:
-                ways += dfs(nx, ny)
-    dp[x][y] = ways
+                dp[x][y]  += dfs(nx, ny)
+    
     return dp[x][y]
 
 

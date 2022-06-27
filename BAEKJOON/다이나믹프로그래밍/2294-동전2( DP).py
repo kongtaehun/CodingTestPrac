@@ -16,4 +16,7 @@ for i in range(1, k+1):
         else:
             dp[i] = min(dp[i], dp[i-j] + 1)
 
-print(dp)
+if dp[k] != 100000:
+    print(dp[k])
+else:
+    print(-1)

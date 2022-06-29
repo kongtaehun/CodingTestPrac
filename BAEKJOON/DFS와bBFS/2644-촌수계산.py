@@ -8,6 +8,7 @@ def dfs(visited, graph, start, count):
 
 if __name__ == '__main__':
 
+    #============input============
     n = int(input())
     start, target = map(int, input().split())
     m = int(input())
@@ -17,5 +18,8 @@ if __name__ == '__main__':
         graph[a].append(b)
         graph[b].append(a)
     visited = [-1 for i in range(n+1)]
+
+
+    #============cal============
     dfs(visited, graph, start, 0)
     print(visited[target])

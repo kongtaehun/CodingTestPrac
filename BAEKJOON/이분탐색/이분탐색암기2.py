@@ -17,7 +17,7 @@ def getLenCount(len, nums):
 
 def binary_search(nums, target):
     end = max(nums)
-    start = 0
+    start = 1
 
     while start <= end:              # todo 부등호 화깅ㄴ
         mid = (start+end)//2
@@ -34,4 +34,4 @@ nums = []
 for i in range(k):
     nums.append(int(input()))
 s, m, e = binary_search(nums, n)
-print(e)
+print(s-1)

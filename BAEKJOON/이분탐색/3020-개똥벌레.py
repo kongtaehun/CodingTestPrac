@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 # 이분탐색 0~7
 # 최솟값을 찾는다.
 # 그러한 최솟값을 갖는 구간을

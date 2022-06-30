@@ -1,4 +1,6 @@
-
+#예외조건 실수 : 99퍼이면 예외임 - 한번이라도 졌었기 때문에 절대 100%가 될 수 없다.
+#             100 퍼일 경우 더이상 오를 승률이 없다.
+#부동소수점 실수
 
 def binary_search(x, y):
     origin = int((y*100/x))
@@ -18,7 +20,8 @@ def binary_search(x, y):
 
 
 x, y = map(int, input().split())
-if x == y:
+z = (y*100)//x
+if z>=99:
     print(-1)
 else:
     start = binary_search(x, y)

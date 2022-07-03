@@ -4,7 +4,7 @@ summ = 0
 for i in range(len(nums)):
     summ += nums[i]
     nums[i] = summ
-print(nums)
+
 q = []
 for i in range(m):
     a, b = map(int, input().split())

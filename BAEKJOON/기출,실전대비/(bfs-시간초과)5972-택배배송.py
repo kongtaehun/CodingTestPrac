@@ -1,8 +1,7 @@
 from collections import deque
-
-
+import sys
+input = sys.stdin.readline
 def bfs(start, visited):
-    global result
     q = deque()
     q.append((start, 0))
     while q:
@@ -24,8 +23,5 @@ for i in range(m):
     graph[a].append((b, c))
     graph[b].append((a, c))
 
-for i in graph:
-    i.sort(key=lambda x: x[1])
-result = 0
 bfs(1, visited)
 print(visited[n])

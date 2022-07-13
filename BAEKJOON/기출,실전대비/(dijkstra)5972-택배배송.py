@@ -3,7 +3,6 @@ INF = int(1e9)
 # 다익스트라를 사용해야할 떄가 된건가?
 n, m = map(int, input().split())
 graph = [[] for i in range(n+1)]
-
 distance = [INF]*(n+1)
 for i in range(m):
     a, b, c = map(int, input().split())
@@ -27,5 +26,4 @@ def dijkstra(start):
 
 
 dijkstra(1)
-
-print(distance)
+print(distance[n])

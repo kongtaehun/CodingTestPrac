@@ -12,11 +12,15 @@ count = 0
 max_val = 0
 for i in range(x, n+1):
     temp = nums[i] - nums[i-x]
-    print(temp)
+    
     if temp > max_val:
         max_val = temp
         count = 1
     elif temp == max_val:
         count += 1
-print(max_val)
-print(count)
+if max_val == 0:
+    print("SAD")
+else:
+        
+    print(max_val)
+    print(count)

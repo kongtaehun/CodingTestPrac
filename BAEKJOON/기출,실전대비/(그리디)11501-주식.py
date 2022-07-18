@@ -15,3 +15,4 @@ for i in range(int(input())):
         else:
             total += mx - nums[j]
     print(total)
+

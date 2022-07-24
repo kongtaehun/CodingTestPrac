@@ -23,9 +23,9 @@ for i in range(int(input())):
                 scores[nums[i]][3].append(score)
                 score += 1
 
-scores.sort(key=lambda x: (x[1], x[3]))
+    scores.sort(key=lambda x: (x[1], x[3]))
 
-for i in range(1, len(scores)):
-    if scores[i][0] == 6:
-        print(scores[i][2])
-        break
+    for i in range(1, len(scores)):
+        if scores[i][0] == 6:
+            print(scores[i][2])
+            break

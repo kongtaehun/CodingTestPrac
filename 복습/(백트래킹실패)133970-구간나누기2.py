@@ -1,3 +1,7 @@
+#백트래킹 실패
+
+import sys
+sys.setrecursionlimit(10**6)
 from itertools import combinations
 # 배열의 요소개수가 8이고 M은 3일 경어
 # 1~8까지의 수중에서 3을 중복없이 뽑는것

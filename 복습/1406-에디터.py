@@ -11,11 +11,14 @@ rStk = deque()
 for i in range(int(input())):
     a = list(map(str, input().split()))
     if a[0] == 'L':
-        rStk.appendleft(lStk.pop())
+        if len(lStk)!=0:
+            rStk.appendleft(lStk.pop())
     elif a[0] == 'D':
-        lStk.append(rStk.popleft())
+        if len(rStk)!=0:
+            lStk.append(rStk.popleft())
     elif a[0] == 'B':
-        lStk.pop()
+        if len(lStk)!=0:
+            lStk.pop()
     elif a[0] == 'P':
         lStk.append(a[1])
 

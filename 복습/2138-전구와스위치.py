@@ -24,7 +24,7 @@ for i in range(1, n):
 if a == b:
     print(cnt)
 else:
-    cnt = 0
+    cnt = 1
     a_[0] = abs(a_[0]-1)
     a_[1] = abs(a_[1]-1)
     for i in range(1, n):

@@ -21,6 +21,7 @@ def bt(depth):
 
 # 사다리 게임을 하는 함수
 def gameStart(board):
+    temp = []
     for now in range(1, n+1):
         origin_now = now
         for j in range(1, m+1):

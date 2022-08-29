@@ -58,14 +58,9 @@ def bfs(board, visited, x, y):
 if __name__ == '__main__':
     n, m = map(int, input().split())
     board = [list(map(int, list(input()))) for _ in range(n)]
-    # print((binary_search(board, 1, min(n, m))-1)**2)
-
-    result = 0
-
-    for i in range(n):
-        for j in range(m):
+    for i in range(1, n):
+        for j in range(1, m):
             if board[i][j] == 1:
-                visited = [[0]*(m) for i in range(n)]
-                result = max(result, bfs(board, visited, i, j))
-
-    print(result**2)
+                board[i][j] = min(board[i][j-1], board[i-1]
+                                  [j-1], board[i-1][j])+1
+    print((max(map(max, board)))**2)

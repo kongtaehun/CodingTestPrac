@@ -10,7 +10,9 @@ SIZE = len(n)
 n = int(n)
 # 2.기본적으로 자리수만큼이 필요
 temp = ['1']*(SIZE)
-if n < int(''.join(temp)):
+if n == 0:
+    print(1)
+elif n < int(''.join(temp)):
     print(SIZE-1)
 else:
     print(SIZE)

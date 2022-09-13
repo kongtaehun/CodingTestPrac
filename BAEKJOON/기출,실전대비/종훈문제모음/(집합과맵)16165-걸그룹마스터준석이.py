@@ -16,7 +16,6 @@ if __name__ == '__main__':
             for i in sorted(list(group[a])):
                 print(i)
         else:
-
             for i in group.keys():
                 if a in group[i]:
                     print(i)

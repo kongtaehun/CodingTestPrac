@@ -18,7 +18,6 @@ def moveShark(board, new_board, x, y):
     s_size, direc, ori_speed = board[x][y]
     speed = ori_speed
     while speed > 0:
-        
         if direc == 4:
             # 가장 왼쪽으로 보내자
             y = 1
@@ -30,7 +29,7 @@ def moveShark(board, new_board, x, y):
             direc = 4
             speed = m-y
         elif direc == 2:
-            #가장아래로 보내자
+            # 가장 왼쪽으로 보내자
             x = n-2
             direc = 1
             speed -= n-x
@@ -38,7 +37,6 @@ def moveShark(board, new_board, x, y):
             x = 1
             direc = 2
             speed -= x+1
-        
     if new_board[x][y] == 0:
         new_board[x][y] = [s_size, direc, ori_speed]
     else:

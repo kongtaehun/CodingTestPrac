@@ -63,5 +63,5 @@ if __name__ == '__main__':
             board = doR(board)
         else:
             board = doC(board)
-        printB(board)
+        # printB(board)
     print(answer)

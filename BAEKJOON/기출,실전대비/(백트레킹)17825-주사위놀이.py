@@ -11,27 +11,28 @@ def move(start, dist):
 
     return start
 
+# depth가 diceloc
+
 
 def bt(depth):
     global result, answer
 
-    if depth == 10:
-        print(result)
+    if depth >= 10:
         answer = max(result, answer)
+        return
 
-    else:
-        for j in range(4):
-            dist = nums.pop()
-            origin = horse[j]
-            arrived = move(horse[j], dist)
-            if arrived in horse:  # 속도느려짐
-                nums.append(dist)
-                continue
+    for j in range(4):
+        before = horse[j]
+        arrived = move(horse[j], nums[depth])
+        # 핵심
+        # 도착한 곳이
+        # 1. 도착점
+        # 2. 도착점이 아니고 다른말이 없는 곳
+        if (arrived < 32 and arrived not in horse) or arrived == 32:
             result += cost[arrived]
             horse[j] = arrived
             bt(depth+1)
-            nums.append(dist)
-            horse[j] = origin
+            horse[j] = before
             result -= cost[arrived]
 
 

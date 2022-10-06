@@ -65,17 +65,19 @@ def rotate(l):
 
         for j in range(n//l):
             y = j*l
-
-            temp = [[0]*l for i in range(l)]
-
             for xx in range(x, x+l):
                 for yy in range(y, y+l):
-                    temp[xx-x][yy-y] = board[xx][yy]
-            temp = list(map(list, zip(*temp[::-1])))
-            for xx in range(x, x+l):
-                for yy in range(y, y+l):
-                    temp_board[xx][yy] = temp[xx-x][yy-y]
-    printB(temp_board)
+                    temp_board[yy][(x+l)-xx-1] = board[xx][yy]
+            # temp = [[0]*l for i in range(l)]
+
+            # for xx in range(x, x+l):
+            #     for yy in range(y, y+l):
+            #         temp[xx-x][yy-y] = board[xx][yy]
+            # temp = list(map(list, zip(*temp[::-1])))
+            # for xx in range(x, x+l):
+            #     for yy in range(y, y+l):
+            #         temp_board[xx][yy] = temp[xx-x][yy-y]
+
     return temp_board
 
 

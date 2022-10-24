@@ -27,7 +27,10 @@ def dijkstra(distance, graph, mx):
 
 
 def findClosestGCD(now, mx):
-    return mx*(now//mx+1)
+    if now % mx == 0:
+        return mx*(now//mx)
+    else:
+        return mx*(now//mx+1)
 
 
 def solution():
